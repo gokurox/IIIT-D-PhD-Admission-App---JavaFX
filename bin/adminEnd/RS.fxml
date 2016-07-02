@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminEnd.ResultController">
+   <children>
+      <Label alignment="CENTER" prefHeight="75.0" prefWidth="800.0" text="Filtered Result">
+         <font>
+            <Font name="Georgia" size="47.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="38.0" layoutY="22.0" mnemonicParsing="false" text="Back" onAction="#backButtonHandler"/>
+      <ScrollPane layoutY="75.0" prefViewportHeight="525.0" prefViewportWidth="800.0">
+         <content>
+            <TableView fx:id="resultTable" layoutY="75.0" prefHeight="525.0" prefWidth="800.0">
+              <columns>
+                <TableColumn fx:id="enrollmentNumber_Col" prefWidth="260.0" text="Enrollment ID" />
+                <TableColumn fx:id="name_Col" prefWidth="260.0" text="Applicant Name" />
+                  <TableColumn fx:id="linkToData_Col" prefWidth="285.0" text="Link To Data" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

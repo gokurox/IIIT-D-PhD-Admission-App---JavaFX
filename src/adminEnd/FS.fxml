@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminEnd.FilterController">
+   <children>
+      <TabPane layoutY="75.0" prefHeight="625.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="PI" text="Personal Information">
+               <content>
+                  <AnchorPane prefHeight="545.0" prefWidth="700.0">
+                     <children>
+                        <TextField fx:id="PI_eMail" layoutX="240.0" layoutY="64.0" prefHeight="31.0" prefWidth="320.0" />
+                        <TextField fx:id="PI_Name" layoutX="240.0" layoutY="119.0" prefWidth="320.0" />
+                        <TextField fx:id="PI_enrollmentNumber" layoutX="240.0" layoutY="177.0" prefWidth="320.0" />
+                        <ComboBox fx:id="PI_category" layoutX="240.0" layoutY="237.0" prefHeight="31.0" prefWidth="320.0" promptText="Choose Category" />
+                        <RadioButton fx:id="PI_Gender_M" layoutX="242.0" layoutY="308.0" mnemonicParsing="false" text="Male">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="PI_Gender_RB" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="PI_Gender_F" layoutX="372.0" layoutY="308.0" mnemonicParsing="false" text="Female" toggleGroup="$PI_Gender_RB" />
+                        <RadioButton fx:id="PI_phyDisabled_Y" layoutX="240.0" layoutY="361.0" mnemonicParsing="false" text="Yes">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="PI_physicallyDisabled_RB" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="PI_phyDisabled_N" layoutX="372.0" layoutY="361.0" mnemonicParsing="false" text="No" toggleGroup="$PI_physicallyDisabled_RB" />
+                        <RadioButton fx:id="PI_DoB_On" layoutX="373.0" layoutY="415.0" mnemonicParsing="false" text="On">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="PI_DoB_RB" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="PI_DoB_After" layoutX="491.0" layoutY="415.0" mnemonicParsing="false" text="After" toggleGroup="$PI_DoB_RB" />
+                        <RadioButton fx:id="PI_DoB_Before" layoutX="242.0" layoutY="415.0" mnemonicParsing="false" text="Before" toggleGroup="$PI_DoB_RB" />
+                        <DatePicker fx:id="PI_DoB_DatePicker" layoutX="240.0" layoutY="476.0" prefWidth="320.0" />
+                        <Label alignment="CENTER" layoutX="40.0" layoutY="69.0" prefWidth="150.0" text="EMail" />
+                        <Label alignment="CENTER" layoutX="40.0" layoutY="124.0" prefWidth="150.0" text="Name" />
+                        <Label alignment="CENTER" layoutX="40.0" layoutY="182.0" prefWidth="150.0" text="Enrollment Number" />
+                        <Label alignment="CENTER" layoutX="40.0" layoutY="242.0" prefWidth="150.0" text="Category" />
+                        <Label alignment="CENTER" layoutX="40.0" layoutY="308.0" prefWidth="150.0" text="Gender" />
+                        <Label alignment="CENTER" layoutX="40.0" layoutY="361.0" prefWidth="150.0" text="Physically Disabled" />
+                        <Label alignment="CENTER" layoutX="40.0" layoutY="415.0" prefWidth="150.0" text="Date Of Birth" />
+                        <Text fx:id="PI_ErrorText" fill="RED" layoutX="52.0" layoutY="536.0" lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="595.6708984375">
+                           <font>
+                              <Font name="Arial Bold Italic" size="17.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="PI_Gender_NOF" layoutX="491.0" layoutY="308.0" mnemonicParsing="false" text="No Gender Filter" toggleGroup="$PI_Gender_RB" />
+                        <RadioButton fx:id="PI_phyDisabled_NOF" layoutX="491.0" layoutY="361.0" mnemonicParsing="false" text="No Phy. Disability Filter" toggleGroup="$PI_physicallyDisabled_RB" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab fx:id="EI" text="Educational Information">
+               <content>
+                  <ScrollPane hbarPolicy="NEVER" pannable="true">
+                     <content>
+                        <AnchorPane prefHeight="1200.0" prefWidth="700.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="72.0" prefWidth="200.0" text="PhD Stream" textAlignment="CENTER" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="126.0" prefWidth="200.0" text="Graduation Degree" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="178.0" prefWidth="200.0" text="Post Graduation Degree" textAlignment="CENTER" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="234.0" prefWidth="200.0" text="Class X Board" textAlignment="CENTER" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="285.0" prefWidth="200.0" text="Class XII Board" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="336.0" prefWidth="200.0" text="Department (Graduation)" textAlignment="CENTER" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="391.0" prefWidth="200.0" text="Depatment (Post Graduation)" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="448.0" prefWidth="200.0" text="University (Graduation)" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="500.0" prefWidth="200.0" text="University (Post Graduation)" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="560.0" prefWidth="200.0" text="State (Graduation From)" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="617.0" prefWidth="200.0" text="State (Post Graduation From)" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="667.0" prefWidth="200.0" text="Class X Board Percentage" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="762.0" prefWidth="200.0" text="Class XII Board Percentage" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="857.0" prefWidth="200.0" text="Graduation Marks Percentage" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="953.0" prefWidth="200.0" text="Post Graduation Marks Percentage" textAlignment="CENTER" wrapText="true" />
+                              <Label alignment="CENTER" layoutX="38.0" layoutY="1051.0" prefWidth="200.0" text="GATE Score" />
+                              <ComboBox fx:id="EI_phdStream" layoutX="287.0" layoutY="67.0" prefWidth="300.0" promptText="Choose PhD Stream" />
+                              <ComboBox fx:id="EI_gradDegree" layoutX="287.0" layoutY="121.0" prefWidth="300.0" promptText="Choose graduation Degree" />
+                              <ComboBox fx:id="EI_postGradDegree" layoutX="287.0" layoutY="173.0" prefWidth="300.0" promptText="Choose Post Graduation Degree" />
+                              <ComboBox fx:id="EI_XBoard" layoutX="287.0" layoutY="229.0" prefWidth="300.0" promptText="Choose Class X Board" />
+                              <ComboBox fx:id="EI_XIIBoard" layoutX="287.0" layoutY="280.0" prefWidth="300.0" promptText="Choose Class XII Board" />
+                              <ComboBox fx:id="EI_gradDiscipline" layoutX="287.0" layoutY="331.0" prefWidth="300.0" promptText="Choose Graduation Discipline" />
+                              <ComboBox fx:id="EI_postGradDiscipline" layoutX="287.0" layoutY="386.0" prefWidth="300.0" promptText="Choose Post Graduation Discipline" />
+                              <TextField fx:id="EI_gradUniversity" layoutX="287.0" layoutY="443.0" prefWidth="350.0" />
+                              <TextField fx:id="EI_postGradUniversity" layoutX="287.0" layoutY="495.0" prefWidth="350.0" />
+                              <ComboBox fx:id="EI_gradState" layoutX="287.0" layoutY="555.0" prefWidth="300.0" promptText="Choose Graduation State" />
+                              <ComboBox fx:id="EI_postGradState" layoutX="287.0" layoutY="612.0" prefWidth="300.0" promptText="Choose Post Graduation State" />
+                              <TextField fx:id="EI_XBoardPerc" alignment="CENTER" layoutX="287.0" layoutY="707.0" prefWidth="350.0" promptText="Percent" />
+                              <TextField fx:id="EI_XIIBoardPerc" alignment="CENTER" layoutX="287.0" layoutY="799.0" prefWidth="350.0" promptText="Percent" />
+                              <TextField fx:id="EI_gradPerc" alignment="CENTER" layoutX="287.0" layoutY="901.0" prefWidth="350.0" promptText="Percent" />
+                              <TextField fx:id="EI_postGradPerc" alignment="CENTER" layoutX="287.0" layoutY="996.0" prefWidth="350.0" promptText="Precent" />
+                              <TextField fx:id="EI_gateScore" alignment="CENTER" layoutX="287.0" layoutY="1103.0" prefWidth="350.0" promptText="Score" />
+                              <RadioButton fx:id="EI_XBoardPerc_GT" layoutX="287.0" layoutY="667.0" mnemonicParsing="false" text="Greater Than">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="EI_XBoardPerc_RB" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="EI_XBoardPerc_EQ" layoutX="431.0" layoutY="667.0" mnemonicParsing="false" text="Equal To" toggleGroup="$EI_XBoardPerc_RB" />
+                              <RadioButton fx:id="EI_XBoardPerc_LT" layoutX="544.0" layoutY="667.0" mnemonicParsing="false" text="Less Than" toggleGroup="$EI_XBoardPerc_RB" />
+                              <RadioButton fx:id="EI_XIIBoardPerc_GT" layoutX="287.0" layoutY="762.0" mnemonicParsing="false" text="Greater Than">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="EI_XIIBoardPerc_RB" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="EI_XIIBoardPerc_EQ" layoutX="431.0" layoutY="762.0" mnemonicParsing="false" text="Equal To" toggleGroup="$EI_XIIBoardPerc_RB" />
+                              <RadioButton fx:id="EI_XIIBoardPerc_LT" layoutX="544.0" layoutY="762.0" mnemonicParsing="false" text="Less Than" toggleGroup="$EI_XIIBoardPerc_RB" />
+                              <RadioButton fx:id="EI_gradPerc_GT" layoutX="287.0" layoutY="857.0" mnemonicParsing="false" text="Greater Than">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="EI_gradPerc_RB" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="EI_gradPerc_EQ" layoutX="431.0" layoutY="857.0" mnemonicParsing="false" text="Equal To" toggleGroup="$EI_gradPerc_RB" />
+                              <RadioButton fx:id="EI_gradPerc_LT" layoutX="544.0" layoutY="857.0" mnemonicParsing="false" text="Less Than" toggleGroup="$EI_gradPerc_RB" />
+                              <RadioButton fx:id="EI_postGradPerc_GT" layoutX="287.0" layoutY="953.0" mnemonicParsing="false" text="Greater Than">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="EI_postGradPerc_RB" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="EI_postGradPerc_EQ" layoutX="431.0" layoutY="953.0" mnemonicParsing="false" text="Equal To" toggleGroup="$EI_postGradPerc_RB" />
+                              <RadioButton fx:id="EI_postGradPerc_LT" layoutX="544.0" layoutY="953.0" mnemonicParsing="false" text="Less Than" toggleGroup="$EI_postGradPerc_RB" />
+                              <RadioButton fx:id="EI_gateScore_GT" layoutX="287.0" layoutY="1051.0" mnemonicParsing="false" text="Greater Than">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="EI_gateScore_RB" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="EI_gateScore_EQ" layoutX="431.0" layoutY="1051.0" mnemonicParsing="false" text="Equal To" toggleGroup="$EI_gateScore_RB" />
+                              <RadioButton fx:id="EI_gateScore_LT" layoutX="544.0" layoutY="1051.0" mnemonicParsing="false" text="Less Than" toggleGroup="$EI_gateScore_RB" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </content></Tab>
+            <Tab fx:id="Submit" text="Submit">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="89.0" layoutY="161.0" prefWidth="200.0" text="Applications Dated From" />
+                        <Label alignment="CENTER" layoutX="89.0" layoutY="243.0" prefWidth="200.0" text="Applications Dated Upto" />
+                        <DatePicker fx:id="Submit_datedFrom" layoutX="371.0" layoutY="161.0" prefHeight="31.0" prefWidth="240.0" />
+                        <DatePicker fx:id="Submit_datedUpto" layoutX="371.0" layoutY="238.0" prefWidth="240.0" />
+                        <Button fx:id="submitButton" layoutX="89.0" layoutY="331.0" mnemonicParsing="false" onAction="#submitButtonHandler" prefHeight="31.0" prefWidth="523.0" text="Show Filtered Result" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label alignment="CENTER" prefHeight="75.0" prefWidth="700.0" text="Filter Entries">
+         <font>
+            <Font name="Georgia" size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
